@@ -26,6 +26,7 @@ from sympy import sympify, roots, solve, expand, factor
 from sympy.abc import r, n
 import sys # For access to the given argument
 import os  # Gives access to current location of co_rr_solver
+import numpy as np
 
 
 # Global variables:
@@ -166,14 +167,14 @@ def fix_syntax(lines):
 """Finds a closed formula for a homogeneous recurrence relation.
     The return value is a string of the right side of the equation "s(n) = ..."""
 def solve_homogeneous_equation(init_conditions, associated):
-    print('test')
+    print("Starting solver")
     # Write down characteristic equation for r
     eq_length = len(init_conditions)
     associated[0] = str('r^' + str(eq_length))
     for i in range(eq_length, 0, -1):
         if i in associated.keys() :
             associated[i] = associated[i] + str('*r^(') + str(eq_length) + str('-') + str(i) + str(')')
-    print(associated)
+    print("Associated equation: " + str(associated))
     eq_string = ''
     for i in range(0, eq_length+1, 1):
         if i in associated.keys():
@@ -181,20 +182,51 @@ def solve_homogeneous_equation(init_conditions, associated):
                 eq_string = eq_string + associated[i] + '-'
             else:
                 eq_string = eq_string + associated[i]
-    print(eq_string)
+    print("Equation: " + eq_string)
+
     # Find the roots for r
     r_symbol = sy.Symbol('r')
     r_solutions = sy.solve(eq_string, r_symbol)
     r_length = len(r_solutions)
-    print(r_solutions)
-    # Write down general solution
-    g_solutions = []
-    if eq_length == r_length:
-        0
-    elif eq_length < r_length:
-        0
+    print("Solutions: " + str(r_solutions))
+    print("Eq length: " + str(eq_length) + " ; Amount of solutions: " + str(r_length))
 
-    return 0
+    # If equation length is equal to solutions
+    if eq_length == r_length:
+
+        # Write down general solution (for solver)
+        general_solution_variables = []
+        general_solution_outcomes = []
+        for i in range(0, eq_length):
+            general_solution_variables_single = []
+            for j in range(0, eq_length + 1):
+                if j != eq_length:
+                    k = r_solutions[j]**i
+                    general_solution_variables_single.append(k)
+                if j == eq_length:
+                    k = init_conditions[i]
+                    general_solution_outcomes.append(int(k))
+            general_solution_variables.append(general_solution_variables_single)
+        print("General solution variables: " + str(general_solution_variables))
+        print("General solution outcomes: " + str(general_solution_outcomes))
+
+        # Solve the system of equations
+        solution = np.linalg.solve(general_solution_variables, general_solution_outcomes)
+        print("Solutions: " + str(solution))
+
+        # Write the solution
+        solution_full = ""
+        for i in range(0, eq_length):
+            if i > 0:
+                solution_full = solution_full + " + "
+            solution_full = solution_full + str(int(solution[i])) + "*" + str(int(r_solutions[i])) + "^n"
+        print("Solved equation: " + solution_full)
+        return(solution_full)
+
+    # If equation length is not equal to solutions
+    elif eq_length > r_length:
+        print("NonEqual")
+        return 0
 
 """Finds a closed formula for a nonhomogeneous equation, where the nonhomogeneous part consists
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
@@ -232,7 +264,7 @@ if len(sys.argv) > 3:
 else:
     path = str(os.path.dirname(os.path.abspath(__file__)))
     print_debug_information = True
-    print(sys.argv)
+    print("Sys.arvg: " + str(sys.argv))
     if len(sys.argv) > 1:
         argv_index = 1
         if "-v" in sys.argv:
@@ -245,7 +277,7 @@ else:
                 argv_index = 2
         if sys.argv[argv_index].find("/") != -1:
             path = sys.argv[argv_index]
-    print(path)
+    print("Path: " + path)
     for filename in glob.glob(path + "\comass[0-9][0-9].txt"):
         print("File: "+filename)
         next_symbolic_var_index = 0 # Reset this index for every file
@@ -260,7 +292,9 @@ else:
         if lines[len(lines) - 1] == "":
             tmp -= 1
         init_conditions = det_init_conditions([lines[index] for index in range(1, tmp)]) # Determine initial conditions with all but the first line as input
+        print("----------------Analyze the recurrence relation----------------")
         associated, f_n_list = analyze_recurrence_equation(lines[0])
+        print("---------------------------------------------------------------")
 
         # Print debugging information:
         debug_print(filename)
@@ -269,7 +303,10 @@ else:
         debug_print("Associated homogeneous recurrence relation:")
         debug_print(associated)
         debug_print("F(n):")
-        debug_print(f_n_list)
+        if not f_n_list:
+            print("Homogeneous equation")
+        else:
+            debug_print(f_n_list)
 
         output_filename = filename.replace(".txt", "-dir.txt")
         resulting_equ = ""
