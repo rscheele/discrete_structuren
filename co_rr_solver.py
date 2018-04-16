@@ -25,7 +25,8 @@ import sympy as sy
 from sympy.solvers.solveset import linsolve
 import sys # For access to the given argument
 import os  # Gives access to current location of co_rr_solver
-
+import pandas
+import math
 
 # Global variables:
 next_symbolic_var_index = 0 # This variable indicates the next index for the p_x variable names needed for Theorem 6.
@@ -140,7 +141,7 @@ def read_file(filename):
     lines = []
     with open(filename, "r") as input_file:
         for index, line in enumerate(input_file):
-            if not (index in [0, 1]) and line != "];\n": # Filter out first and second row and the last that contains "];\n"
+            if not (index in [0, 1]) and line != "];\n" and line != "\n": # Filter out first and second row and the last that contains "];\n"
                 lines.append(line.strip()) # Append and remove leading and closing whitspaces
     return lines
 
@@ -167,8 +168,8 @@ def fix_syntax(lines):
 def solve_homogeneous_equation(init_conditions, associated):
     print("Starting solver")
     # Create symbols for late usage
-    x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
-        'x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w')
+    x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
+        'x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w')
     # Write down characteristic equation for r
     eq_length = len(init_conditions)
     associated[0] = str('r^' + str(eq_length))
@@ -197,21 +198,28 @@ def solve_homogeneous_equation(init_conditions, associated):
 
         # Write down general solution (for solver)
         general_solution_matrix = []
-        for i in range(0, eq_length):
-            general_solution_variables_single = []
-            for j in range(0, eq_length + 1):
-                if j != eq_length:
-                    solution_element = r_solutions[j]**i
-                    general_solution_variables_single.append(solution_element)
-                if j == eq_length:
-                    k = init_conditions[i]
-                    general_solution_variables_single.append(int(solution_element))
-                    general_solution_matrix.append(general_solution_variables_single)
-        print("General solution matrix: " + str(general_solution_matrix))
+        for item in r_solutions:
+            item = (item)**n
+            general_solution_matrix.append(item)
+        print("General solution list: " + str(general_solution_matrix))
+
+        # Generate system of equations
+        system_of_equations = []
+        for item in init_conditions:
+            init_n = item
+            init_solution = init_conditions[item]
+            current_solution = []
+
+            for i in general_solution_matrix:
+                j = i.subs(n, init_n)
+                current_solution.append(j)
+            current_solution.append(int(init_solution))
+            system_of_equations.append(current_solution)
+        print("System of equations: " + str(system_of_equations))
 
         # Solve the system of equations
-        solution_set = linsolve(sy.Matrix(general_solution_matrix), (x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m,
-                                                                     n, o, p, q, r, s, t, u, v, w))
+        solution_set = linsolve(sy.Matrix(system_of_equations), (x, y, z, a, b, c, d, e, f, g, h, k, l, m,
+                                                                     o, p, q, r, s, t, u, v, w))
         solution = []
         for item in solution_set:
             solution = list(item)
@@ -224,7 +232,6 @@ def solve_homogeneous_equation(init_conditions, associated):
                 solution_full = solution_full + " + "
             solution_full = solution_full + "(" + str(solution[i]) + ")" + "*" + "(" + str(r_solutions[i]) + ")" + "^n"
         print("Solved equation: " + solution_full)
-        return solution_full
 
     # If equation length is not equal to solutions (the multiplicity isn't 1 for all roots)
     else:
@@ -260,8 +267,8 @@ def solve_homogeneous_equation(init_conditions, associated):
         print("System of equations: " + str(system_of_equations))
 
         # Solve the system of equations
-        solution_set = linsolve(sy.Matrix(system_of_equations), (x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m,
-                                                                     n, o, p, q, r, s, t, u, v, w))
+        solution_set = linsolve(sy.Matrix(system_of_equations), (x, y, z, a, b, c, d, e, f, g, h, k, l, m,
+                                                                     o, p, q, r, s, t, u, v, w))
         solutions = []
         for item in solution_set:
             solutions = list(item)
@@ -274,7 +281,23 @@ def solve_homogeneous_equation(init_conditions, associated):
                 solution_full = solution_full + " + "
             solution_full = solution_full + "((" + str(general_solution_matrix[i]) + ") * " + str(solutions[i]) + ")"
         print("Solved equation: " + solution_full)
-        return solution_full
+
+    # Check the found solution with the initial values to see if the formula works
+    solution_check = []
+    correct = True
+    for item in init_conditions:
+        init_conditions_solution = init_conditions[item]
+        j = solution_full.replace("n", str(item))
+        j = j.replace("^", "**")
+        j = j.replace("sqrt", "math.sqrt")
+        solution = eval(j)
+        print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(init_conditions_solution))
+        if not float(init_conditions_solution) - 1 / 1000 <= float(solution) <= float(init_conditions_solution) + 1 / 1000:
+            correct = False
+        solution_check.append([solution, init_conditions_solution])
+
+    # Return the solution and the checks
+    return solution_full, correct, solution_check
 
 """Finds a closed formula for a nonhomogeneous equation, where the nonhomogeneous part consists
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
@@ -305,6 +328,9 @@ def reformat_equation(equation):
         equation = equation.replace("sqrt", "", 1)
         pos_sqrt = equation.find("sqrt(")
     return equation
+
+# Write down the solutions
+solution_check_file = []
 
 # Begin of program:
 if len(sys.argv) > 3:
@@ -360,11 +386,17 @@ else:
         resulting_equ = ""
         # Check if the equation is a homogeneous relation
         if not f_n_list: # The list is empty
-            resulting_equ = solve_homogeneous_equation(init_conditions, associated)
+            resulting_equ, correct, solution_check = solve_homogeneous_equation(init_conditions, associated)
+            solution_check_file.append([filename, resulting_equ, correct, solution_check])
         else:
             resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, f_n_list)
         resulting_equ = reformat_equation(resulting_equ)
         write_output_to_file(output_filename, resulting_equ)
 
         debug_print("#################################\n")
+
+    # Write the solution checker to a .csv file
+    df = pandas.DataFrame(data=solution_check_file)
+    df.to_csv("./calculated_solutions.csv", sep=';', index=False, header=["FileName", "Equation", "Correct", "Output"])
+
     print("Program is completely executed. There are no more recurrence relations to compute.")
