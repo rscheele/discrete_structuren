@@ -14,43 +14,24 @@
       <file leaf-file-name="co_rr_solver.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="226" column="30" lean-forward="true" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
+            <state relative-caret-position="308">
+              <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
               <folding>
-                <element signature="e#156#611#1" expanded="false" />
-                <element signature="e#1313#1367#0" expanded="false" />
-                <element signature="e#1480#1556#0" expanded="false" />
-                <element signature="e#1754#2046#0" expanded="false" />
-                <element signature="e#2276#2764#0" expanded="false" />
-                <element signature="e#3248#3673#0" expanded="false" />
-                <element signature="e#3998#4466#0" expanded="false" />
-                <element signature="e#4692#4906#0" expanded="false" />
-                <element signature="e#5223#6344#0" expanded="false" />
-                <element signature="e#6498#6838#0" expanded="false" />
-                <element signature="e#6999#7244#0" expanded="false" />
-                <element signature="e#7393#7560#0" expanded="false" />
-                <element signature="e#10654#10719#0" expanded="false" />
+                <element signature="e#613#664#0" expanded="true" />
+                <element signature="e#1255#1309#0" expanded="false" />
+                <element signature="e#1422#1498#0" expanded="false" />
+                <element signature="e#1696#1988#0" expanded="false" />
+                <element signature="e#2218#2706#0" expanded="false" />
+                <element signature="e#3190#3615#0" expanded="false" />
+                <element signature="e#3940#4408#0" expanded="false" />
+                <element signature="e#4634#4848#0" expanded="false" />
+                <element signature="e#5165#6286#0" expanded="false" />
+                <element signature="e#6440#6780#0" expanded="false" />
+                <element signature="e#6941#7186#0" expanded="false" />
+                <element signature="e#7335#7502#0" expanded="false" />
+                <element signature="e#9007#10505#0" expanded="false" />
+                <element signature="e#11297#11352#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comass07.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comass07.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comass07-dir.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comass07-dir.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -97,7 +78,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,6 +90,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,13 +156,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -202,7 +184,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -212,27 +194,36 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comass41.txt">
+    <entry file="file://$PROJECT_DIR$/comass07.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass07-dir.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -242,247 +233,28 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+    <entry file="file://$PROJECT_DIR$/comass07.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass03.txt" />
-    <entry file="file://$PROJECT_DIR$/comass16.txt" />
-    <entry file="file://$PROJECT_DIR$/comass14.txt" />
-    <entry file="file://$PROJECT_DIR$/comass06.txt" />
-    <entry file="file://$PROJECT_DIR$/comass43.txt" />
-    <entry file="file://$PROJECT_DIR$/comass41.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass05-dir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass04-dir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass02-dir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass00-dir.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -495,32 +267,304 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comass07.txt">
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="2" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass41.txt" />
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass16.txt" />
+    <entry file="file://$PROJECT_DIR$/comass14.txt" />
+    <entry file="file://$PROJECT_DIR$/comass06.txt" />
+    <entry file="file://$PROJECT_DIR$/comass43.txt" />
+    <entry file="file://$PROJECT_DIR$/comass41.txt" />
+    <entry file="file://$PROJECT_DIR$/comass05-dir.txt" />
+    <entry file="file://$PROJECT_DIR$/comass04-dir.txt" />
+    <entry file="file://$PROJECT_DIR$/comass02-dir.txt" />
+    <entry file="file://$PROJECT_DIR$/comass00-dir.txt" />
+    <entry file="file://$PROJECT_DIR$/comass07.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass07-dir.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass03.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/comass03-dir.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="226" column="30" lean-forward="true" selection-start-line="226" selection-start-column="30" selection-end-line="226" selection-end-column="30" />
+        <state relative-caret-position="308">
+          <caret line="234" column="0" lean-forward="false" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
           <folding>
-            <element signature="e#156#611#1" expanded="false" />
-            <element signature="e#1313#1367#0" expanded="false" />
-            <element signature="e#1480#1556#0" expanded="false" />
-            <element signature="e#1754#2046#0" expanded="false" />
-            <element signature="e#2276#2764#0" expanded="false" />
-            <element signature="e#3248#3673#0" expanded="false" />
-            <element signature="e#3998#4466#0" expanded="false" />
-            <element signature="e#4692#4906#0" expanded="false" />
-            <element signature="e#5223#6344#0" expanded="false" />
-            <element signature="e#6498#6838#0" expanded="false" />
-            <element signature="e#6999#7244#0" expanded="false" />
-            <element signature="e#7393#7560#0" expanded="false" />
-            <element signature="e#10654#10719#0" expanded="false" />
+            <element signature="e#613#664#0" expanded="true" />
+            <element signature="e#1255#1309#0" expanded="false" />
+            <element signature="e#1422#1498#0" expanded="false" />
+            <element signature="e#1696#1988#0" expanded="false" />
+            <element signature="e#2218#2706#0" expanded="false" />
+            <element signature="e#3190#3615#0" expanded="false" />
+            <element signature="e#3940#4408#0" expanded="false" />
+            <element signature="e#4634#4848#0" expanded="false" />
+            <element signature="e#5165#6286#0" expanded="false" />
+            <element signature="e#6440#6780#0" expanded="false" />
+            <element signature="e#6941#7186#0" expanded="false" />
+            <element signature="e#7335#7502#0" expanded="false" />
+            <element signature="e#9007#10505#0" expanded="false" />
+            <element signature="e#11297#11352#0" expanded="false" />
           </folding>
         </state>
       </provider>

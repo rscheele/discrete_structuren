@@ -22,11 +22,9 @@ DESCRIPTION
 
 import glob # Library for filename pattern-matching
 import sympy as sy
-from sympy import sympify, roots, solve, expand, factor
-from sympy.abc import r, n
+from sympy.solvers.solveset import linsolve
 import sys # For access to the given argument
 import os  # Gives access to current location of co_rr_solver
-import numpy as np
 
 
 # Global variables:
@@ -168,6 +166,9 @@ def fix_syntax(lines):
     The return value is a string of the right side of the equation "s(n) = ..."""
 def solve_homogeneous_equation(init_conditions, associated):
     print("Starting solver")
+    # Create symbols for late usage
+    x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
+        'x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w')
     # Write down characteristic equation for r
     eq_length = len(init_conditions)
     associated[0] = str('r^' + str(eq_length))
@@ -191,42 +192,48 @@ def solve_homogeneous_equation(init_conditions, associated):
     print("Solutions: " + str(r_solutions))
     print("Eq length: " + str(eq_length) + " ; Amount of solutions: " + str(r_length))
 
-    # If equation length is equal to solutions
+    # If equation length is equal to solutions (the multiplicity is 1 for all roots)
     if eq_length == r_length:
 
         # Write down general solution (for solver)
-        general_solution_variables = []
-        general_solution_outcomes = []
+        general_solution_matrix = []
         for i in range(0, eq_length):
             general_solution_variables_single = []
             for j in range(0, eq_length + 1):
                 if j != eq_length:
-                    k = r_solutions[j]**i
-                    general_solution_variables_single.append(k)
+                    solution_element = r_solutions[j]**i
+                    general_solution_variables_single.append(solution_element)
                 if j == eq_length:
                     k = init_conditions[i]
-                    general_solution_outcomes.append(int(k))
-            general_solution_variables.append(general_solution_variables_single)
-        print("General solution variables: " + str(general_solution_variables))
-        print("General solution outcomes: " + str(general_solution_outcomes))
+                    general_solution_variables_single.append(int(solution_element))
+                    general_solution_matrix.append(general_solution_variables_single)
+        print("General solution matrix: " + str(general_solution_matrix))
 
         # Solve the system of equations
-        solution = np.linalg.solve(general_solution_variables, general_solution_outcomes)
+        solution_set = linsolve(sy.Matrix(general_solution_matrix), (x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m,
+                                                                     n, o, p, q, r, s, t, u, v, w))
+        solution = []
+        for item in solution_set:
+            solution = list(item)
         print("Solutions: " + str(solution))
 
-        # Write the solution
+        # Write the solution down as a string to return
         solution_full = ""
         for i in range(0, eq_length):
             if i > 0:
                 solution_full = solution_full + " + "
-            solution_full = solution_full + str(int(solution[i])) + "*" + str(int(r_solutions[i])) + "^n"
+            solution_full = solution_full + "(" + str(solution[i]) + ")" + "*" + "(" + str(r_solutions[i]) + ")" + "^n"
         print("Solved equation: " + solution_full)
-        return(solution_full)
+        return solution_full
 
-    # If equation length is not equal to solutions
-    elif eq_length > r_length:
-        print("NonEqual")
-        return 0
+    # If equation length is not equal to solutions (the multiplicity isn't 1 for all roots)
+    else:
+        # Because sympy.solve doesn't return the multiplicity you have to use sympy.roots
+        r_solutions = sy.roots(eq_string, r_symbol)
+        print("Solutions (/w mult): " + str(r_solutions))
+        for item in r_solutions:
+            print(item)
+        return "a^n"
 
 """Finds a closed formula for a nonhomogeneous equation, where the nonhomogeneous part consists
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
@@ -234,7 +241,7 @@ def solve_homogeneous_equation(init_conditions, associated):
     The return value is a string of the right side of the equation "s(n) = ..."""
 def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list):
     # You have to implement this yourself!
-    return init_conditions
+    return "a^n"
 
 """Transforms the string equation, that is of the right side of the form "s(n) = ...",
     and wirtes it towards the file "filename", which also needs to contain the desired path."""
