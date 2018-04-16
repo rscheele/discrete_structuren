@@ -231,9 +231,50 @@ def solve_homogeneous_equation(init_conditions, associated):
         # Because sympy.solve doesn't return the multiplicity you have to use sympy.roots
         r_solutions = sy.roots(eq_string, r_symbol)
         print("Solutions (/w mult): " + str(r_solutions))
+
+        # Write down the general solution
+        general_solution_matrix = []
         for item in r_solutions:
-            print(item)
-        return "a^n"
+            multiplicity = r_solutions[item]
+            for i in range(0, multiplicity):
+                if i == 0:
+                    general_solution_variable = (item ** n)
+                    general_solution_matrix.append(general_solution_variable)
+                else:
+                    general_solution_variable = (item ** n) * (n ** i)
+                    general_solution_matrix.append(general_solution_variable)
+        print("General solution list: " + str(general_solution_matrix))
+
+        # Create a system of equations for the initial values with the general solution
+        system_of_equations = []
+        for item in init_conditions:
+            init_outcome = init_conditions[item]
+            init_n = item
+            current_solution = []
+
+            for i in general_solution_matrix:
+                j = i.subs(n, init_n)
+                current_solution.append(j)
+            current_solution.append(int(init_outcome))
+            system_of_equations.append(current_solution)
+        print("System of equations: " + str(system_of_equations))
+
+        # Solve the system of equations
+        solution_set = linsolve(sy.Matrix(system_of_equations), (x, y, z, a, b, c, d, e, f, g, h, i, j, k, l, m,
+                                                                     n, o, p, q, r, s, t, u, v, w))
+        solutions = []
+        for item in solution_set:
+            solutions = list(item)
+        print("Solutions: " + str(solutions))
+
+        # Write the solution down as a string to return
+        solution_full = ""
+        for i in range(0, len(general_solution_matrix)):
+            if i > 0:
+                solution_full = solution_full + " + "
+            solution_full = solution_full + "((" + str(general_solution_matrix[i]) + ") * " + str(solutions[i]) + ")"
+        print("Solved equation: " + solution_full)
+        return solution_full
 
 """Finds a closed formula for a nonhomogeneous equation, where the nonhomogeneous part consists
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
