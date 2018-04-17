@@ -133,6 +133,8 @@ def analyze_recurrence_equation(equation):
         associated[step_length] = c_n # Add the recursive step length and factor to the dictionary
         pos_s = equation.find("s(n-") # First position of recurrent part (because other "s(n-"-part is already removed)
     # Sorry, but you will have to implement the treatment of F(n) yourself!
+    if equation != "" and equation != "+0":
+        f_n_list = equation
     return associated, f_n_list
 
 """Reads in all lines of the file except the first, second and last one.
@@ -166,7 +168,7 @@ def fix_syntax(lines):
 """Finds a closed formula for a homogeneous recurrence relation.
     The return value is a string of the right side of the equation "s(n) = ..."""
 def solve_homogeneous_equation(init_conditions, associated):
-    print("Starting solver")
+    print("Starting homogeneous solver")
     # Create symbols for late usage
     x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
         'x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w')
@@ -282,7 +284,7 @@ def solve_homogeneous_equation(init_conditions, associated):
             solution_full = solution_full + "((" + str(general_solution_matrix[i]) + ") * " + str(solutions[i]) + ")"
         print("Solved equation: " + solution_full)
 
-    # Check the found solution with the initial values to see if the formula works
+    # Check the found solution with the initial values to see if the formula works (only for initial values)
     solution_check = []
     correct = True
     for item in init_conditions:
@@ -303,9 +305,78 @@ def solve_homogeneous_equation(init_conditions, associated):
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
     and "r*s^n" with r and s being real numbers.
     The return value is a string of the right side of the equation "s(n) = ..."""
-def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list):
-    # You have to implement this yourself!
-    return "a^n"
+def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogeneous_type):
+    print("Starting non-homogeneous solver")
+    # Create symbols for late usage
+    x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
+        'x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w')
+    # Write down characteristic equation for r
+    eq_length = len(init_conditions)
+    associated[0] = str('r^' + str(eq_length))
+    for i in range(eq_length, 0, -1):
+        if i in associated.keys():
+            associated[i] = associated[i] + str('*r^(') + str(eq_length) + str('-') + str(i) + str(')')
+    print("Associated equation: " + str(associated))
+    eq_string = ''
+    for i in range(0, eq_length + 1, 1):
+        if i in associated.keys():
+            if i < eq_length:
+                eq_string = eq_string + associated[i] + '-'
+            else:
+                eq_string = eq_string + associated[i]
+    print("Equation: " + eq_string)
+
+    # Find the roots for r
+    r_symbol = sy.Symbol('r')
+    r_solutions = sy.solve(eq_string, r_symbol)
+    r_length = len(r_solutions)
+    print("Solutions: " + str(r_solutions))
+    print("Eq length: " + str(eq_length) + " ; Amount of solutions: " + str(r_length))
+
+    # If equation length is equal to solutions (the multiplicity is 1 for all roots)
+    if eq_length == r_length:
+
+        # Write down general solution (for solver)
+        homogeneous_general_solution_matrix = []
+        for item in r_solutions:
+            item = (item) ** n
+            homogeneous_general_solution_matrix.append(item)
+        print("General solution list: " + str(homogeneous_general_solution_matrix))
+
+    # If equation length is not equal to solutions (the multiplicity isn't 1 for all roots)
+    else:
+        # Because sympy.solve doesn't return the multiplicity you have to use sympy.roots
+        r_solutions = sy.roots(eq_string, r_symbol)
+        print("Solutions (/w mult): " + str(r_solutions))
+
+        # Write down the general solution
+        homogeneous_general_solution_matrix = []
+        for item in r_solutions:
+            multiplicity = r_solutions[item]
+            for i in range(0, multiplicity):
+                if i == 0:
+                    general_solution_variable = (item ** n)
+                    homogeneous_general_solution_matrix.append(general_solution_variable)
+                else:
+                    general_solution_variable = (item ** n) * (n ** i)
+                    homogeneous_general_solution_matrix.append(general_solution_variable)
+        print("General solution list: " + str(homogeneous_general_solution_matrix))
+
+    # Simplify fn
+    fn = sy.simplify(f_n_list)
+    print("Simplified fn: " + str(fn))
+    # The associated homogeneous solution has been found, now the particular solution has to be calculated
+    if homogeneous_type == "c":
+        0
+    if homogeneous_type == "e":
+        0
+    if homogeneous_type == "p":
+        0
+
+    # merge the two
+    # TODO
+
+    return 0
 
 """Transforms the string equation, that is of the right side of the form "s(n) = ...",
     and wirtes it towards the file "filename", which also needs to contain the desired path."""
@@ -389,7 +460,17 @@ else:
             resulting_equ, correct, solution_check = solve_homogeneous_equation(init_conditions, associated)
             solution_check_file.append([filename, resulting_equ, correct, solution_check])
         else:
-            resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, f_n_list)
+            # Input for type of homogeneous equation. 'e' for exponential, 'p' for polynomial, 'c' for constant.
+            # Any other value to skip this equation
+            print("Currently solving " + filename)
+            print("Type of equation (e for exponential, p for polynomial, c for constant, s for skip): ")
+            homogeneous_type = input()
+            if homogeneous_type == "e" or homogeneous_type == "p" or homogeneous_type == "c":
+                resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogeneous_type)
+                solution_check_file.append([filename, "TODO", False, "TODO"])
+            else:
+                resulting_equ = "a**n"
+                solution_check_file.append([filename, "SKIPPED", False, "SKIPPED"])
         resulting_equ = reformat_equation(resulting_equ)
         write_output_to_file(output_filename, resulting_equ)
 
