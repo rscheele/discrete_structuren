@@ -403,7 +403,7 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
         if not root_equals_s:
             fn_item = 'x*' + str(fn_s) + '**n'
         if root_equals_s:
-            fn_item = 'n**' + str(root_equals_s_mult) + '*x*' + str(fn_s) + '**n'
+            fn_item = 'n**' + str(root_equals_s_mult) + '*x*(' + str(fn_s) + ')**n'
         print("fn_item: " + fn_item)
 
         # Create list to place in the equation for calculating p0
