@@ -27,6 +27,7 @@ import sys # For access to the given argument
 import os  # Gives access to current location of co_rr_solver
 import pandas
 import math
+import numpy as np
 
 # Global variables:
 next_symbolic_var_index = 0 # This variable indicates the next index for the p_x variable names needed for Theorem 6.
@@ -305,11 +306,13 @@ def solve_homogeneous_equation(init_conditions, associated):
     of a linear combination of constants, "r*n^x" with r a real number and x a positive natural number,
     and "r*s^n" with r and s being real numbers.
     The return value is a string of the right side of the equation "s(n) = ..."""
-def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogeneous_type):
+def solve_nonhomogeneous_equation(init_conditions, associated, associated_equation, f_n_list, homogeneous_type):
     print("Starting non-homogeneous solver")
+    print("Equation: " + str(associated))
     # Create symbols for late usage
     x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
         'x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w')
+    symbollist = [x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w]
     # Write down characteristic equation for r
     eq_length = len(init_conditions)
     associated[0] = str('r^' + str(eq_length))
@@ -345,7 +348,7 @@ def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogen
 
     # If equation length is not equal to solutions (the multiplicity isn't 1 for all roots)
     else:
-        # Because sympy.solve doesn't return the multiplicity you have to use sympy.roots
+        # Because sympy.solve doesn't return the multiplicity use sympy.roots
         r_solutions = sy.roots(eq_string, r_symbol)
         print("Solutions (/w mult): " + str(r_solutions))
 
@@ -360,23 +363,104 @@ def solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogen
                 else:
                     general_solution_variable = (item ** n) * (n ** i)
                     homogeneous_general_solution_matrix.append(general_solution_variable)
-        print("General solution list: " + str(homogeneous_general_solution_matrix))
+        print("General homogeneous solution list: " + str(homogeneous_general_solution_matrix))
 
     # Simplify fn
     fn = sy.simplify(f_n_list)
     print("Simplified fn: " + str(fn))
+    print("Associated equation: " + str(associated_equation))
+    particular_solution = ""
     # The associated homogeneous solution has been found, now the particular solution has to be calculated
+    # For constant
     if homogeneous_type == "c":
-        0
+        # In the form of 'p0'
+        fn_formula_string = ""
+        for item in associated_equation:
+            fn_formula_string = fn_formula_string + str((str(associated_equation[item]) + str("*x"))) + "+"
+        fn_formula_string = fn_formula_string + str(f_n_list) + " - x"
+        x_symbol = sy.Symbol('x')
+        print("Particular solution formula: " + fn_formula_string)
+        # The solution is the particular solution
+        particular_solution = sy.solve(fn_formula_string, x_symbol)
+        print("Particular solution: " + str(particular_solution))
     if homogeneous_type == "e":
-        0
+        # In the form 'p0*s^n or n^m*p0*s^n'
+        fn_formula_string = ""
+        fn_item = ""
+        # Find the s for fn
+        fn_s = fn.replace(n, 1)
+        print("F(n): " + str(fn_s))
+
+        # Check if s equals one of the roots
+        r_solutions = sy.roots(eq_string, r_symbol)
+        root_equals_s = False
+        print("Solutions (/w mult): " + str(r_solutions))
+        root_equals_s_mult = 0
+        for item in r_solutions:
+            if fn_s == item:
+                root_equals_s = True
+                root_equals_s_mult = r_solutions[item]
+        if not root_equals_s:
+            fn_item = 'x*' + str(fn_s) + '**n'
+        if root_equals_s:
+            fn_item = 'n**' + str(root_equals_s_mult) + '*x*' + str(fn_s) + '**n'
+        print("fn_item: " + fn_item)
+
+        # Create list to place in the equation for calculating p0
+        fn_item_list = []
+        for item in associated_equation:
+            new_n = "(n-" + str(item) + ")"
+            n_item = fn_item.replace("n", new_n)
+            n_item = str(associated_equation[item]) + "*" + str(n_item)
+            fn_item_list.append(n_item)
+        print("F(n) item list: " + str(fn_item_list))
+
+        # Formulate the equation
+        i = 0
+        for item in fn_item_list:
+            fn_formula_string = fn_formula_string + item + "+"
+        fn_formula_string = fn_formula_string + str(f_n_list) + " - " + fn_item
+        print("Particular solution formula: " + fn_formula_string)
+
+        # The solution is the particular solution
+        x_symbol = sy.Symbol('x')
+        particular_solution_x = sy.solve(fn_formula_string, x_symbol)
+        particular_solution = fn_item.replace("x", str(particular_solution_x[0]))
+        print("Particular solution: " + str(particular_solution))
     if homogeneous_type == "p":
+        # In the form 'n^m(p_t*n^t + p_(t-1)*n^(t-1)+...+ p_1*n + p_0)*s^n'
+        # Or '(p_t*n^t + p_(t-1)*n^(t-1)+...+ p_1*n + p_0)*s^n'
         0
 
-    # merge the two
-    # TODO
+    # Add homogeneous general solution and particular solution together for general solution
+    general_solution = ""
+    for i in range(0, len(homogeneous_general_solution_matrix)):
+        general_solution = general_solution + str(homogeneous_general_solution_matrix[i]) + "*" + str(symbollist[i]) + "+"
+    general_solution = general_solution + str(particular_solution)
+    print("General solution: " + general_solution)
 
-    return 0
+    # Create system of equations to solve symbols
+    general_solution_matrix = []
+    for i in range(0, len(init_conditions)):
+        replacement = str(str("(" + str(i) + ")"))
+        value = general_solution.replace("n", replacement)
+        value = value + ' - ' + str(init_conditions[i])
+        general_solution_matrix.extend([value])
+    print("System of equations: " + str(general_solution_matrix))
+
+    # Solve the system of equations
+    solution = sy.solve(general_solution_matrix, symbollist)
+    print("Solutions: " + str(solution))
+
+    # Use solution to replace values in general solution
+    final_solution = general_solution
+    for item in solution:
+        replacement = str(str("(" + str(solution[item]) + ")"))
+        final_solution = final_solution.replace(str(item), replacement)
+
+    print("Final solution: " + str(final_solution))
+
+    return final_solution
 
 """Transforms the string equation, that is of the right side of the form "s(n) = ...",
     and wirtes it towards the file "filename", which also needs to contain the desired path."""
@@ -439,6 +523,7 @@ else:
         init_conditions = det_init_conditions([lines[index] for index in range(1, tmp)]) # Determine initial conditions with all but the first line as input
         print("----------------Analyze the recurrence relation----------------")
         associated, f_n_list = analyze_recurrence_equation(lines[0])
+        associated_equation, f_n_list = analyze_recurrence_equation(lines[0])
         print("---------------------------------------------------------------")
 
         # Print debugging information:
@@ -464,9 +549,9 @@ else:
             # Any other value to skip this equation
             print("Currently solving " + filename)
             print("Type of equation (e for exponential, p for polynomial, c for constant, s for skip): ")
-            homogeneous_type = input()
+            homogeneous_type = 'e'#input()
             if homogeneous_type == "e" or homogeneous_type == "p" or homogeneous_type == "c":
-                resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, f_n_list, homogeneous_type)
+                resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, associated_equation, f_n_list, homogeneous_type)
                 solution_check_file.append([filename, "TODO", False, "TODO"])
             else:
                 resulting_equ = "a**n"
