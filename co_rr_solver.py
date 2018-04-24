@@ -382,7 +382,8 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
         print("Particular solution formula: " + fn_formula_string)
         # The solution is the particular solution
         particular_solution = sy.solve(fn_formula_string, x_symbol)
-        print("Particular solution: " + str(particular_solution))
+        particular_solution = str(particular_solution[0])
+        print("Particular solution: " + particular_solution)
     if homogeneous_type == "e":
         # In the form 'p0*s^n or n^m*p0*s^n'
         fn_formula_string = ""
@@ -430,7 +431,27 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
     if homogeneous_type == "p":
         # In the form 'n^m(p_t*n^t + p_(t-1)*n^(t-1)+...+ p_1*n + p_0)*s^n'
         # Or '(p_t*n^t + p_(t-1)*n^(t-1)+...+ p_1*n + p_0)*s^n'
-        0
+        # In the form 'p0*s^n or n^m*p0*s^n'
+        fn_formula_string = ""
+        fn_item = ""
+        # Find the s for fn
+        fn_s = fn.replace(n, 1)
+        print("F(n): " + str(fn_s))
+
+        # Check if s equals one of the roots
+        r_solutions = sy.roots(eq_string, r_symbol)
+        root_equals_s = False
+        print("Solutions (/w mult): " + str(r_solutions))
+        root_equals_s_mult = 0
+        for item in r_solutions:
+            if fn_s == item:
+                root_equals_s = True
+                root_equals_s_mult = r_solutions[item]
+        if not root_equals_s:
+            fn_item = 'x*' + str(fn_s) + '**n'
+        if root_equals_s:
+            fn_item = 'n**' + str(root_equals_s_mult) + '*x*(' + str(fn_s) + ')**n'
+        print("fn_item: " + fn_item)
 
     # Add homogeneous general solution and particular solution together for general solution
     general_solution = ""
@@ -460,7 +481,23 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
 
     print("Final solution: " + str(final_solution))
 
-    return final_solution
+    # Check the found solution with the initial values to see if the formula works (only for initial values)
+    solution_check = []
+    correct = True
+    for item in init_conditions:
+        init_conditions_solution = init_conditions[item]
+        j = final_solution.replace("n", str(item))
+        j = j.replace("^", "**")
+        j = j.replace("sqrt", "math.sqrt")
+        solution = eval(j)
+        print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(
+            init_conditions_solution))
+        if not float(init_conditions_solution) - 1 / 1000 <= float(solution) <= float(
+                init_conditions_solution) + 1 / 1000:
+            correct = False
+        solution_check.append([solution, init_conditions_solution])
+
+    return final_solution, correct, solution_check
 
 """Transforms the string equation, that is of the right side of the form "s(n) = ...",
     and wirtes it towards the file "filename", which also needs to contain the desired path."""
@@ -549,10 +586,10 @@ else:
             # Any other value to skip this equation
             print("Currently solving " + filename)
             print("Type of equation (e for exponential, p for polynomial, c for constant, s for skip): ")
-            homogeneous_type = 'e'#input()
+            homogeneous_type = input()
             if homogeneous_type == "e" or homogeneous_type == "p" or homogeneous_type == "c":
-                resulting_equ = solve_nonhomogeneous_equation(init_conditions, associated, associated_equation, f_n_list, homogeneous_type)
-                solution_check_file.append([filename, "TODO", False, "TODO"])
+                resulting_equ, correct, solution_check = solve_nonhomogeneous_equation(init_conditions, associated, associated_equation, f_n_list, homogeneous_type)
+                solution_check_file.append([filename, resulting_equ, correct, solution_check])
             else:
                 resulting_equ = "a**n"
                 solution_check_file.append([filename, "SKIPPED", False, "SKIPPED"])
