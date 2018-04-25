@@ -294,7 +294,7 @@ def solve_homogeneous_equation(init_conditions, associated):
         j = j.replace("^", "**")
         j = j.replace("sqrt", "math.sqrt")
         solution = eval(j)
-        print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(init_conditions_solution))
+        #print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(init_conditions_solution))
         if not float(init_conditions_solution) - 1 / 1000 <= float(solution) <= float(init_conditions_solution) + 1 / 1000:
             correct = False
         solution_check.append([solution, init_conditions_solution])
@@ -490,8 +490,8 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
         j = j.replace("^", "**")
         j = j.replace("sqrt", "math.sqrt")
         solution = eval(j)
-        print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(
-            init_conditions_solution))
+        '''print("Solution with formula: " + str(solution) + "  Solution from init_conditions: " + str(
+            init_conditions_solution))'''
         if not float(init_conditions_solution) - 1 / 1000 <= float(solution) <= float(
                 init_conditions_solution) + 1 / 1000:
             correct = False
@@ -523,6 +523,80 @@ def reformat_equation(equation):
 
 # Write down the solutions
 solution_check_file = []
+full_solution_check_file = []
+
+def check_solution(filename, equation, init_values, f_n_list, resulting_equation):
+    print("Solution solver")
+    #print(equation)
+    #print(init_values)
+    #print(f_n_list)
+    #print(resulting_equ)
+
+    # Create symbols for late usage
+    x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w = sy.symbols(
+        'x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w')
+    symbollist = [x, y, z, a, b, c, d, e, f, g, h, k, l, m, n, o, p, q, r, s, t, u, v, w]
+
+    # Create formula for the recurrence relation
+    recurrence_formula = ""
+    for item in equation:
+        recurrence_formula = recurrence_formula + str(equation[item]) + "*" + str(symbollist[item-1]) + " + "
+    recurrence_formula = recurrence_formula + f_n_list
+    #print(recurrence_formula)
+
+    # Set initial values
+    recurrence_items = []
+    for item in init_values:
+        recurrence_items.append(init_values[item])
+    #print(recurrence_items)
+
+    # Calculate the first 20 values afer the initial values
+    classic_solutions = []
+    for i in range(len(init_values), 20 + len(init_values)):
+        # Set up a temporary formula to fill with values
+        current_formula = recurrence_formula
+        # Replace the symbols by the recurrence items values
+        item_length = len(recurrence_items) - 1
+        for j in range(0, len(recurrence_items)):
+            current_formula = current_formula.replace(str(symbollist[j]), str(recurrence_items[item_length]))
+            item_length = item_length - 1
+        # Replace n by value of n
+        current_formula = current_formula.replace('n', str(i))
+        #print(current_formula)
+        # Calculate the solution
+        solution = eval(current_formula)
+        classic_solutions.append(solution)
+        #print(solution)
+        # Replace s(n-k) ... s(n-1) values with the newly calculated value
+        for j in range(0, len(recurrence_items)):
+            if j != len(recurrence_items)-1:
+                recurrence_items[j] = recurrence_items[j+1]
+            else:
+                recurrence_items[j] = solution
+
+    # Calculate for resulting equation
+    new_solutions = []
+    for i in range(len(init_values), 20 + len(init_values)):
+        # Our formula
+        current_formula = resulting_equation
+        # Replace the n
+        current_formula = current_formula.replace("n", str(i))
+        current_formula = current_formula.replace("^", "**")
+        current_formula = current_formula.replace("sqrt", "math.sqrt")
+        #print(current_formula)
+        # Calculate the solution
+        solution = eval(current_formula)
+        new_solutions.append(solution)
+        #print(solution)
+
+    # Check both the lists of solutions and return results
+    correct = True
+    for i in range(0, 20):
+        if not float(float(new_solutions[i]) >= classic_solutions[i]) - 1 / 1000 and float(new_solutions[i]) <= float(classic_solutions[i]) + 1 / 1000:
+            correct = False
+    checked_solution = [filename, correct, recurrence_formula, resulting_equ, classic_solutions, new_solutions]
+    print("Solution check is : " + str(correct) + " - for: " + str(checked_solution))
+    return checked_solution
 
 # Begin of program:
 if len(sys.argv) > 3:
@@ -581,6 +655,7 @@ else:
         if not f_n_list: # The list is empty
             resulting_equ, correct, solution_check = solve_homogeneous_equation(init_conditions, associated)
             solution_check_file.append([filename, resulting_equ, correct, solution_check])
+            f_n_list = "0"
         else:
             # Input for type of homogeneous equation. 'e' for exponential, 'p' for polynomial, 'c' for constant.
             # Any other value to skip this equation
@@ -598,8 +673,14 @@ else:
 
         debug_print("#################################\n")
 
+        # Calculate the first 20 values with both the old and new equation
+        checked_solution = check_solution(filename, associated_equation, init_conditions, f_n_list, resulting_equ)
+        full_solution_check_file.append(checked_solution)
+
     # Write the solution checker to a .csv file
     df = pandas.DataFrame(data=solution_check_file)
-    df.to_csv("./calculated_solutions.csv", sep=';', index=False, header=["FileName", "Equation", "Correct", "Output"])
+    df.to_csv("./init_calculated_solutions.csv", sep=';', index=False, header=["FileName", "Equation", "Correct", "Output"])
+    df2 = pandas.DataFrame(data=full_solution_check_file)
+    df2.to_csv("./full_calculated_solutions.csv", sep=';', index=False, header=["FileName", "Correct", "Recurrence Formula", "Resulting Formula", "Output recurrence formula", "Output resulting Formula"])
 
     print("Program is completely executed. There are no more recurrence relations to compute.")
