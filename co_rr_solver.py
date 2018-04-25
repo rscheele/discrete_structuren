@@ -436,7 +436,7 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
         fn_item = ""
         # Find the s for fn
         fn_s = fn.replace(n, 1)
-        print("F(n): " + str(fn_s))
+        print("s: " + str(fn_s))
 
         # Check if s equals one of the roots
         r_solutions = sy.roots(eq_string, r_symbol)
@@ -447,11 +447,27 @@ def solve_nonhomogeneous_equation(init_conditions, associated, associated_equati
             if fn_s == item:
                 root_equals_s = True
                 root_equals_s_mult = r_solutions[item]
-        if not root_equals_s:
-            fn_item = 'x*' + str(fn_s) + '**n'
         if root_equals_s:
-            fn_item = 'n**' + str(root_equals_s_mult) + '*x*(' + str(fn_s) + ')**n'
+            fn_item = "n**" + str(root_equals_s_mult) + "*("
+        else:
+            fn_item = "("
+        # Formulate f(n)
+        fn_t = str(fn).split("**",1)[1]
+        for i in range(int(fn_t), -1, -1):
+            if i != int(fn_t):
+                fn_item = fn_item + "+"
+            fn_item = fn_item + str(symbollist[i]) + "*n**" + str(i)
+        fn_item = fn_item + ")"
         print("fn_item: " + fn_item)
+
+        # Formulate equation to solve to find symbols
+        fn_formula_string = ""
+        for item in associated_equation:
+            current_fn_item = fn_item.replace("n", str("(n-" + str(item) + ")"))
+            fn_formula_string = fn_formula_string + str(associated_equation[item]) + "*" + current_fn_item
+        fn_formula_string = fn_formula_string + "+" + f_n_list + " - " + fn_item
+        print("Fn formula: " + fn_formula_string)
+
 
     # Add homogeneous general solution and particular solution together for general solution
     general_solution = ""
