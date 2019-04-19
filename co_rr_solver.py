@@ -27,7 +27,6 @@ import sys # For access to the given argument
 import os  # Gives access to current location of co_rr_solver
 import pandas
 import math
-import numpy as np
 
 # Global variables:
 next_symbolic_var_index = 0 # This variable indicates the next index for the p_x variable names needed for Theorem 6.

@@ -1,10 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/co_rr_solver.py" line="474" />
+    <bookmark url="file://$PROJECT_DIR$/co_rr_solver.py" line="686" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0939be4-08d8-47b5-9072-4d310b020c71" name="Default" comment="" />
+    <list default="true" id="c0939be4-08d8-47b5-9072-4d310b020c71" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/discrete_structuren.iml" afterPath="$PROJECT_DIR$/.idea/discrete_structuren.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/co_rr_solver.py" afterPath="$PROJECT_DIR$/co_rr_solver.py" />
+      <change beforePath="$PROJECT_DIR$/comass-stud.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comass13-dir.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comass13.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass-stud.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass00.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass01.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass02.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass03.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass04.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass05.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass06.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass07.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass08.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass09.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass13.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass14.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass16.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass17.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass18.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass19.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass20.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass21.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass22.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass23.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass24.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass25.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass26.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass27.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass28.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass29.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass30.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass31.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass32.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass33.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass34.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass35.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass36.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass37.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass38.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass39.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass40.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass41.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass42.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass43.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass44.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass45.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass46.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass47.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass48.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass49.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass51.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass52.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass53.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass54.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass55.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass56.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass57.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass58.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass59.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass60.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass61.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass62.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass63.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass64.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass65.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass66.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass67.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass68.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass69.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass70.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass71.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass72.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass73.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass74.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass75.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass76.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass77.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass78.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass79.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass80.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass81.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass82.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass83.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass84.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass85.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass86.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass87.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass88.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass89.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass90.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass91.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass92.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass93.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass94.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass95.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass96.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass97.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass98.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/comassinputs1/comass99.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/constant/comass09.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/constant/comass19.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/constant/comass28.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass00.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass15.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass20.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass21.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass38.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass60.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass73.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass78.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass82.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass85.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/exponential/comass86.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/full_calculated_solutions.csv" afterPath="$PROJECT_DIR$/full_calculated_solutions.csv" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass01.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass02.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass03.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass04.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass05.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass06.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass07.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass08.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass10.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass11.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass12.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass13.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass14.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass41.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass43.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass46.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass50.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass53.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass58.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass59.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass63.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass68.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass71.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass74.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass81.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass84.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass87.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass93.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/homogeneous/comass96.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/init_calculated_solutions.csv" afterPath="$PROJECT_DIR$/init_calculated_solutions.csv" />
+      <change beforePath="$PROJECT_DIR$/out/full_calculated_solutions.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/init_calculated_solutions.csv" afterPath="" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,40 +168,29 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Discrete_Structuren$co_rr_solver.coverage" NAME="co_rr_solver Coverage Results" MODIFIED="1524754537583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="co_rr_solver.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="679" column="31" lean-forward="false" selection-start-line="679" selection-start-column="31" selection-end-line="679" selection-end-column="31" />
-              <folding>
-                <element signature="e#613#664#0" expanded="true" />
-                <element signature="e#1299#1353#0" expanded="false" />
-                <element signature="e#1466#1542#0" expanded="false" />
-                <element signature="e#1740#2032#0" expanded="false" />
-                <element signature="e#2262#2750#0" expanded="false" />
-                <element signature="e#3234#3659#0" expanded="false" />
-                <element signature="e#3984#4452#0" expanded="false" />
-                <element signature="e#4678#4892#0" expanded="false" />
-                <element signature="e#5209#6402#0" expanded="false" />
-                <element signature="e#6556#6913#0" expanded="false" />
-                <element signature="e#7074#7319#0" expanded="false" />
-                <element signature="e#7468#7635#0" expanded="false" />
-                <element signature="e#7849#13771#0" expanded="false" />
-                <element signature="e#23652#23895#0" expanded="false" />
-                <element signature="e#24179#24554#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file leaf-file-name="co_rr_solver.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="10450">
+              <caret line="550" column="31" lean-forward="false" selection-start-line="550" selection-start-column="31" selection-end-line="550" selection-end-column="31" />
+              <folding>
+                <element signature="e#613#664#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,6 +208,8 @@
     <findStrings>
       <find>len lines</find>
       <find>simplify</find>
+      <find>sy</find>
+      <find>sy.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,11 +227,16 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="114" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -102,22 +254,23 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="discrete_structuren" type="b2602c69:ProjectViewProjectNode" />
-              <item name="discrete_structuren" type="462c0819:PsiDirectoryNode" />
+              <item name="Discrete Structuren" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Discrete Structuren" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -149,6 +302,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="discrete_structuren" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/co_rr_solver.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -167,6 +321,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="discrete_structuren" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -201,18 +356,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23899034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997879" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -220,9 +377,14 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -247,20 +409,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#613#664#0" expanded="true" />
-            <element signature="e#1299#1353#0" expanded="false" />
-            <element signature="e#1466#1542#0" expanded="false" />
-            <element signature="e#1740#2032#0" expanded="false" />
-            <element signature="e#2262#2750#0" expanded="false" />
-            <element signature="e#3234#3659#0" expanded="false" />
-            <element signature="e#3984#4452#0" expanded="false" />
-            <element signature="e#4678#4892#0" expanded="false" />
-            <element signature="e#5209#6402#0" expanded="false" />
-            <element signature="e#6556#6913#0" expanded="false" />
-            <element signature="e#7074#7319#0" expanded="false" />
-            <element signature="e#7468#7635#0" expanded="false" />
-            <element signature="e#7849#13771#0" expanded="false" />
-            <element signature="e#23652#23895#0" expanded="false" />
-            <element signature="e#24179#24554#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -271,20 +419,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#613#664#0" expanded="true" />
-            <element signature="e#1299#1353#0" expanded="false" />
-            <element signature="e#1466#1542#0" expanded="false" />
-            <element signature="e#1740#2032#0" expanded="false" />
-            <element signature="e#2262#2750#0" expanded="false" />
-            <element signature="e#3234#3659#0" expanded="false" />
-            <element signature="e#3984#4452#0" expanded="false" />
-            <element signature="e#4678#4892#0" expanded="false" />
-            <element signature="e#5209#6402#0" expanded="false" />
-            <element signature="e#6556#6913#0" expanded="false" />
-            <element signature="e#7074#7319#0" expanded="false" />
-            <element signature="e#7468#7635#0" expanded="false" />
-            <element signature="e#7849#13771#0" expanded="false" />
-            <element signature="e#23652#23895#0" expanded="false" />
-            <element signature="e#24179#24554#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -312,13 +446,7 @@
     <entry file="file://$PROJECT_DIR$/comass02-dir.txt" />
     <entry file="file://$PROJECT_DIR$/comass23-dir.txt" />
     <entry file="file://$PROJECT_DIR$/comass22.txt" />
-    <entry file="file://$PROJECT_DIR$/comass-stud.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/comass-stud.csv" />
     <entry file="file://$PROJECT_DIR$/comass23.txt" />
     <entry file="file://$PROJECT_DIR$/comass30.txt" />
     <entry file="file://$PROJECT_DIR$/comass58.txt" />
@@ -336,47 +464,13 @@
     <entry file="file://$PROJECT_DIR$/comass38-dir.txt" />
     <entry file="file://$PROJECT_DIR$/comass82-dir.txt" />
     <entry file="file://$PROJECT_DIR$/comass82.txt" />
-    <entry file="file://$PROJECT_DIR$/calculated_solutions.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/calculated_solutions.csv" />
     <entry file="file://$PROJECT_DIR$/comass16-dir.txt" />
-    <entry file="file://$PROJECT_DIR$/comass21.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/full_calculated_solutions.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass02.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comass16.txt">
+    <entry file="file://$PROJECT_DIR$/comass21.txt" />
+    <entry file="file://$PROJECT_DIR$/full_calculated_solutions.csv" />
+    <entry file="file://$PROJECT_DIR$/comass16.txt" />
+    <entry file="file://$PROJECT_DIR$/comass02.txt" />
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -386,24 +480,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/co_rr_solver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="679" column="31" lean-forward="false" selection-start-line="679" selection-start-column="31" selection-end-line="679" selection-end-column="31" />
+        <state relative-caret-position="10450">
+          <caret line="550" column="31" lean-forward="false" selection-start-line="550" selection-start-column="31" selection-end-line="550" selection-end-column="31" />
           <folding>
             <element signature="e#613#664#0" expanded="true" />
-            <element signature="e#1299#1353#0" expanded="false" />
-            <element signature="e#1466#1542#0" expanded="false" />
-            <element signature="e#1740#2032#0" expanded="false" />
-            <element signature="e#2262#2750#0" expanded="false" />
-            <element signature="e#3234#3659#0" expanded="false" />
-            <element signature="e#3984#4452#0" expanded="false" />
-            <element signature="e#4678#4892#0" expanded="false" />
-            <element signature="e#5209#6402#0" expanded="false" />
-            <element signature="e#6556#6913#0" expanded="false" />
-            <element signature="e#7074#7319#0" expanded="false" />
-            <element signature="e#7468#7635#0" expanded="false" />
-            <element signature="e#7849#13771#0" expanded="false" />
-            <element signature="e#23652#23895#0" expanded="false" />
-            <element signature="e#24179#24554#0" expanded="false" />
           </folding>
         </state>
       </provider>
